@@ -33,13 +33,6 @@ if(length(args) == 0)
 DANE <- read.csv2(file = args[1], sep = ";")
 
 
-#testowo bez trybu wsadowego
-DANE <- read.csv2("http://www.cs.put.poznan.pl/kgutowska/RPiS/dane/przykladoweDane-Projekt.csv", sep = ";")
-
-print("NASZ PLIK:")
-print(DANE)
-
-
 
 print("WYSZUKIWANIE ILE MAMY GRUP BADANYCH I ILE PACJENTOW W KAZDEJ W GRUP:")
 
@@ -58,10 +51,7 @@ cat("\n")
 
 
 print("PRZYGOTOWANIE DANYCH WEJSCIOWYCH -> ZASTEPOWANIE BRAKOW")
-# HGB 13 wiersz œrednia - 12,41 mediana - 12,404
-# MON 5 wiersz mediana - 0,76 srednia - 0,85
-# HGB wiersz 68 mediana - 11,43 srednia - 11,26
-#i <- 1
+
 poczatek <- 1
 koniec <- ile_badanych[1]
 for(i in 1:length(grupy)){
